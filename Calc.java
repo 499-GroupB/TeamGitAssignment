@@ -1,5 +1,11 @@
 import java.util.Scanner;
+import static org.junit.Assert.assertEquals;
+import org.junit.Assert;
 
+import java.beans.Transient;
+import java.util.*;
+
+import org.junit.Test;
 // Basic calculator
 
 public class Calc {
@@ -62,5 +68,13 @@ public class Calc {
         System.out.println("Result: " + result);
 
         scan.close();
+
     }
+
+    @Test
+    public void TestAdd() {
+        int x = add(2, 4);
+        assertEquals(2 + 4, x);
+    }
+
 }
