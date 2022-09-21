@@ -1,0 +1,2 @@
+# TeamGitAssignment
+A small calculator
