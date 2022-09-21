@@ -11,17 +11,17 @@ public class Calc {
     }
 
     public static int sub(){
-        // addition code
+        // subtraction code
         return 0;
     }
 
     public static int mul(){
-        // addition code
+        // multiplication code
         return 0;
     }
 
     public static int div(){
-        // addition code
+        // division code
         return 0;
     }
 
