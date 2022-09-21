@@ -21,9 +21,12 @@ public class Calc {
         return 0;
     }
 
-    public static int mul() {
+    public static int mul(int x, int y) {
         // multiplication code
-        return 0;
+        int y1=0;
+        for(int i=0; i<x; i++)
+            y1 += y;
+        return y1;
     }
 
     public static int div() {
