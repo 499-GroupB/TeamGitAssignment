@@ -16,9 +16,9 @@ public class Calc {
         return x + y;
     }
 
-    public static int sub() {
-        // subtraction code
-        return 0;
+    public static int sub(int x, int y) {
+        // Subtraction code.
+        return x - y;
     }
 
     public static int mul() {
@@ -58,7 +58,7 @@ public class Calc {
                 result = add(num1, num2);
                 break;
             case 2:
-                result = sub();
+                result = sub(num1, num2);
                 break;
             case 3:
                 result = mul(num1, num2);
@@ -79,7 +79,10 @@ public class Calc {
         int x = add(2, 4);
         assertEquals(2 + 4, x);
     }
-
+    public void testSub() {
+        int x = sub(3, 12);
+        assertEquals(3 - 12, x);
+    }
     public boolean testMul(){
         return mul(-3,4)==(int)(-3*4);
 
