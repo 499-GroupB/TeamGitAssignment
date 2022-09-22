@@ -24,8 +24,8 @@ public class Calc {
     public static int mul(int x, int y) {
         // multiplication code
         int y1=0;
-        for(int i=0; i<x; i++)
-            y1 += y;
+        for(int i=0; i<Math.abs(x); i++)
+            y1 = x>0 ? y1+y : y1-y;
         return y1;
     }
 
@@ -61,7 +61,7 @@ public class Calc {
                 result = sub();
                 break;
             case 3:
-                result = mul();
+                result = mul(num1, num2);
                 break;
             case 4:
                 result = div();
@@ -80,4 +80,8 @@ public class Calc {
         assertEquals(2 + 4, x);
     }
 
+    public boolean testMul(){
+        return mul(-3,4)==(int)(-3*4);
+
+    }
 }
