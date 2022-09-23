@@ -29,9 +29,18 @@ public class Calc {
         return y1;
     }
 
-    public static int div() {
+    public static int[] div(int x, int y) {
         // division code
-        return 0;
+        int remainder = x;
+        int quotient = 0;
+
+        while(remainder >= y){
+            remainder -= y;
+            quotient += 1;
+        }
+
+        int[] result = {quotient, remainder};
+        return result;
     }
 
     public static void main(String args[]) {
@@ -64,7 +73,7 @@ public class Calc {
                 result = mul(num1, num2);
                 break;
             case 4:
-                result = div();
+                result = div(num1, num2)[0];
                 break;
         }
 
@@ -79,10 +88,18 @@ public class Calc {
         int x = add(2, 4);
         assertEquals(2 + 4, x);
     }
+    
+    @Test
+    public void TestDiv() {
+        int x = div(10, 2)[0];
+        assertEquals(10 / 2, x);
+    }
+    
     public void testSub() {
         int x = sub(3, 12);
         assertEquals(3 - 12, x);
     }
+    
     public boolean testMul(){
         return mul(-3,4)==(int)(-3*4);
 
