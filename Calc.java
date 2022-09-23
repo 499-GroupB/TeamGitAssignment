@@ -89,6 +89,12 @@ public class Calc {
         assertEquals(2 + 4, x);
     }
 
+    @Test
+    public void TestDiv() {
+        int x = div(10, 2)[0];
+        assertEquals(10 / 2, x);
+    }
+
     public boolean testMul(){
         return mul(-3,4)==(int)(-3*4);
 
