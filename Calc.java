@@ -21,7 +21,7 @@ public class Calc {
         return x - y;
     }
 
-    public static int mul() {
+    public static int mul(int x, int y) {
         // multiplication code
         int y1=0;
         for(int i=0; i<Math.abs(x); i++)
@@ -95,11 +95,13 @@ public class Calc {
         assertEquals(10 / 2, x);
     }
     
+    @Test
     public void testSub() {
         int x = sub(3, 12);
         assertEquals(3 - 12, x);
     }
     
+    @Test
     public boolean testMul(){
         return mul(-3,4)==(int)(-3*4);
 
